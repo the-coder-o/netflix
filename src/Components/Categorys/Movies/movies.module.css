@@ -1,0 +1,28 @@
+.img__netflix {
+  position: absolute;
+  width: 40px;
+  top: 5px;
+}
+
+.movies__father {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 130px;
+  justify-content: space-between;
+}
+
+.movies__img {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.text {
+  width: 300px;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+}

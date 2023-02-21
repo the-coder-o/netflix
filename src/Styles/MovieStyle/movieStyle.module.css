@@ -1,0 +1,93 @@
+.movie__post {
+  background: url(../../Assets/img/wednesday.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.text {
+  padding-top: 220px;
+  padding-left: 65px;
+  font-size: 55px;
+}
+
+.img__logo {
+  gap: 15px;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 65px;
+  align-items: center;
+}
+
+.movie__text p {
+  flex: none;
+  width: 636px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 33px;
+  font-style: normal;
+  padding-left: 65px;
+  padding-bottom: 15px;
+}
+
+.btn__movie {
+  gap: 15px;
+  display: flex;
+  padding-left: 65px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.btn__play {
+  gap: 5px;
+  flex-grow: 0;
+  width: 175px;
+  display: flex;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  padding-left: 65px;
+  font-style: normal;
+  padding: 15px 30px;
+  border-radius: 4px;
+  align-items: center;
+  background: #ffffff;
+  justify-content: center;
+  color: #141414 !important;
+}
+
+.btn__play:hover {
+  opacity: 0.7;
+}
+
+.btn__play i {
+  color: #141414 !important;
+}
+
+.btn__more {
+  gap: 5px;
+  width: 276px;
+  display: flex;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 28px;
+  font-style: normal;
+  padding: 15px 30px;
+  border-radius: 4px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.post1__father {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.popular__text {
+  padding-left: 65px;
+  color: white !important;
+}

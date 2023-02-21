@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  color: white !important ;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+}

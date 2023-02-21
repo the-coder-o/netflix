@@ -1,0 +1,50 @@
+.swipe {
+  width: 100%;
+  overflow-x: hidden;
+  overflow: none;
+}
+
+.swiper__slide {
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: -1e21;
+}
+
+.swiper__slide img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  color: red !important;
+}
+
+.slider {
+  position: relative;
+}
+
+.img__netflix {
+  position: absolute;
+  width: 35px !important;
+  top: 5px;
+  left: 0px;
+}
+
+.text {
+  bottom: 0px;
+  font-size: 15px;
+  font-weight: 800;
+  position: absolute;
+  text-align: center;
+  color: #fff !important;
+}
