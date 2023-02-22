@@ -24,7 +24,12 @@ const Header = () => {
                 <Link className={headerStyle.nav__link}>Serials</Link>
               </li>
               <li>
-                <Link className={headerStyle.nav__link}>Popular movies</Link>
+                <Link
+                  to={"/popular-movies-categories"}
+                  className={headerStyle.nav__link}
+                >
+                  Popular movies
+                </Link>
               </li>
               <li>
                 <Link
@@ -45,7 +50,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className={headerStyle.search__father}>
-            <Link to={"#"}>
+            <Link to={"/search-movies-category-all"}>
               <i class="fa-solid fa-magnifying-glass"></i>
             </Link>
             <Link to={"#"}>

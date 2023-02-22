@@ -1,0 +1,62 @@
+.form__search {
+  gap: 5px;
+  display: flex;
+  padding-top: 130px;
+  align-items: center;
+}
+
+.form__search input {
+  width: 350px;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 7px;
+  color: #fff !important;
+  border: 1.5px solid red;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.form__search input::placeholder {
+  color: #fff;
+  font-size: 15px;
+}
+
+.form__search button {
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 14px 20px;
+  border-radius: 7px;
+  color: red !important;
+  border: 1.5px solid red;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.img__netflix {
+  position: absolute;
+  width: 40px;
+  top: 5px;
+}
+
+.cartoon__father {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
+.cartoon__img {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.text {
+  width: 300px;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+}

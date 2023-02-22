@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 import netflix from "../../../Assets/logo/pngwing.com.png";
-import movies from "../../Categorys/Cartoons/cartoon.module.css";
+import movies from "../../Categorys/PopularMovies/popular.module.css";
 
-const MoviesActionFive = () => {
+const MoviePopularTwo = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=2&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=36&with_watch_monetization_types=flatrate`
     )
       .then((res) => res.json())
       .then((elem) => {
@@ -46,4 +46,4 @@ const MoviesActionFive = () => {
   );
 };
 
-export default MoviesActionFive;
+export default MoviePopularTwo;

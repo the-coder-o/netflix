@@ -1,9 +1,10 @@
+import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 import Header from "../Header/Header";
-import single from "../../Styles/SingleProduct/singleProduct.module.css";
-import { useParams } from "react-router-dom";
 import SimilarMovies from "../SimilarMovies/SimilarMovies";
+import single from "../../Styles/SingleProduct/singleProduct.module.css";
+import SingleProductDescription from "./Description";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -34,23 +35,26 @@ const SingleProduct = () => {
               <h3 className={single.title}>{data.title}</h3>
               <h3 className={single.like}>
                 Maturity rating: <span>{data.vote_average}</span>|
-                <span> {data.vote_count}+ </span>|<span> {data.status} </span>|
+                <span> {data.vote_count}+ </span>|<span> {data.status} </span>
               </h3>
               <p className={single.description}>{data.overview}</p>
-              <p className={single.aktior}>
-                <span>В ролях:</span> Антонио Бандерас, Сальма Хайек, Зак
-                Галифианакис.
-              </p>
               <p className={single.year}>
                 <span>Movie year:</span> {data.release_date}
               </p>
               <p className={single.year}>
-                <span>Popularity:</span> {data.popularity}
+                <span>Popularity:</span>
+                {data.popularity}
+                <a class="fa-solid star fa-star"></a>
+                <a class="fa-solid star fa-star"></a>
+                <a class="fa-solid star fa-star"></a>
+                <a class="fa-solid star fa-star"></a>
+                <a class="fa-solid star fa-star"></a>
               </p>
             </div>
           </div>
           <img src={imageUrl(data.poster_path)} alt="" />
         </div>
+        <SingleProductDescription id={id} />
         <div className={single.product__country}>
           <div className={single.country}>
             <img
@@ -61,7 +65,7 @@ const SingleProduct = () => {
             <h3>{data?.belongs_to_collection?.origin_country}</h3>
           </div>
         </div>
-        <h2>Similar movies</h2>
+        <h2>We recommend you 😍</h2>
         <SimilarMovies id={id} />
       </div>
     </>

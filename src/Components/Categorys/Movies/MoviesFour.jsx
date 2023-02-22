@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import netflix from "../../../Assets/logo/pngwing.com.png";
 import movies from "../../Categorys/Cartoons/cartoon.module.css";
-import Header from "../../Header/Header";
 
 const MoviesActionFour = () => {
   const [data, setData] = useState([]);

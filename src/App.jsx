@@ -9,6 +9,8 @@ import SingleProduct from "./Components/SingleProduct/SingleProduct";
 import Cartoons from "./Components/Categorys/Cartoons/Cartoon";
 import MoviesAction from "./Components/Categorys/Movies/Movies";
 import Footer from "./Components/Footer/Footer";
+import MoviePopular from "./Components/Categorys/PopularMovies/PopularMovies";
+import SearchMovies from "./Components/SearchMovies/SearchMovies";
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
           path="/sign-up-email-password-new-user"
           element={<SignUpEmail />}
         />
-        <Route path="/sign-in-email-password-user" element={<SignInEmail />} />
-        <Route path="/movie-product/:id" element={<SingleProduct />} />
         <Route path="/cartoons-categories" element={<Cartoons />} />
+        <Route path="/movie-product/:id" element={<SingleProduct />} />
         <Route path="/action-movies-categories" element={<MoviesAction />} />
+        <Route path="/popular-movies-categories" element={<MoviePopular />} />
+        <Route path="/sign-in-email-password-user" element={<SignInEmail />} />
+        <Route path="/search-movies-category-all" element={<SearchMovies />} />
       </Routes>
       <Footer />
     </div>

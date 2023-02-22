@@ -1,0 +1,35 @@
+footer {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.footer__father {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #808080 !important;
+}
+
+.link__btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #808080 !important;
+  border: 1px solid #808080;
+  padding: 12px 30px;
+}
+
+.footer__list {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
