@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import netflix from "../../Assets/logo/pngwing.com.png";
 import search from "../../Styles/SearchMovies/searchMovies.module.css";
+import Jenres from "../Categorys/Jenres/Jenres";
 import Header from "../Header/Header";
 
 const SearchMovies = () => {
@@ -51,6 +52,7 @@ const SearchMovies = () => {
   return (
     <div>
       <Header />
+      <Jenres />
       <div className="container">
         <form onSubmit={submitSearch} className={search.form__search}>
           <input

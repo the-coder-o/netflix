@@ -98,3 +98,16 @@
   margin-top: 50px;
   padding-bottom: 0;
 }
+
+.genres {
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.genres span {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: red;
+}

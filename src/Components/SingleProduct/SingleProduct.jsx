@@ -17,6 +17,7 @@ const SingleProduct = () => {
       .then((res) => res.json())
       .then((elem) => {
         setData(elem);
+        console.log(elem);
       })
       .catch((error) => {
         console.log(error);
@@ -25,6 +26,7 @@ const SingleProduct = () => {
   const imageUrl = (posterPath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterPath}`;
   };
+
   return (
     <>
       <Header />
@@ -39,6 +41,18 @@ const SingleProduct = () => {
               </h3>
               <p className={single.description}>{data.overview}</p>
               <p className={single.year}>
+                <span>Released in the company: </span>
+                {data?.production_companies?.[0].name}
+                <span></span>
+                {/* {data?.production_companies?.[1].name} */}
+              </p>
+              <p className={single.year}>
+                <span>Language: </span> {data?.original_language}
+              </p>
+              <p className={single.year}>
+                <span>Budget:</span> {data?.budget}$
+              </p>
+              <p className={single.year}>
                 <span>Movie year:</span> {data.release_date}
               </p>
               <p className={single.year}>
@@ -50,9 +64,22 @@ const SingleProduct = () => {
                 <a class="fa-solid star fa-star"></a>
                 <a class="fa-solid star fa-star"></a>
               </p>
+              <p className={single.year}>
+                <span>Produced in the city: </span>
+                {data?.production_countries?.[0].name}
+                <span></span>
+                {data?.production_countries?.[0].iso_3166_1}
+              </p>
+              <div className={single.genres}>
+                {/* <span>{data?.genres?.[0].name}</span> */}
+                {/* <span>{data?.genres?.[1].name}</span> */}
+                {/* <span>{data?.genres?.[2].name}</span> */}
+                {/* <span>{data?.genres?.[3].name}</span> */}
+                {/* <span>{data?.genres?.[4].name}</span> */}
+              </div>
             </div>
           </div>
-          <img src={imageUrl(data.poster_path)} alt="" />
+          <img src={imageUrl(data.poster_path)} width={100} alt="" />
         </div>
         <SingleProductDescription id={id} />
         <div className={single.product__country}>

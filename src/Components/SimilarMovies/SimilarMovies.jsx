@@ -24,9 +24,15 @@ const SimilarMovies = ({ id }) => {
         console.log(error);
       });
   }, []);
+
   const imageUrl = (posterpath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
+
+  const windowReload = (e) => {
+    window.reload();
+  };
+
   return (
     <div>
       <Swiper
@@ -45,7 +51,7 @@ const SimilarMovies = ({ id }) => {
                 <h2>Similar movies</h2>
                 <SwiperSlide className={similar.swiper__slide}>
                   <img src={netflix} className={similar.img__netflix} alt="" />
-                  <Link to={`/movie-product/${elem.id}`}>
+                  <Link onClick={windowReload} to={`/movie-product/${elem.id}`}>
                     <img src={imageUrl(elem?.poster_path)} />
                   </Link>
                   <p className={similar.text}>{elem?.name}</p>

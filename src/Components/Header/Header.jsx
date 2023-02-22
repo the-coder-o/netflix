@@ -21,9 +21,6 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className={headerStyle.nav__link}>Serials</Link>
-              </li>
-              <li>
                 <Link
                   to={"/popular-movies-categories"}
                   className={headerStyle.nav__link}

@@ -15,7 +15,7 @@ const MoviePostOne = () => {
   useEffect(() => {
     setLoader(true);
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=111&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=12&with_watch_monetization_types=flatrate`
     )
       .then((res) => res.json())
       .then((elem) => {

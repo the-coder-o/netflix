@@ -26,11 +26,17 @@ const MoviePost = () => {
             </p>
           </div>
           <div className={movie.btn__movie}>
-            <Link className={movie.btn__play} to={"/"}>
+            <Link
+              className={movie.btn__play}
+              to={"https://www.netflix.com/uz/title/81231974"}
+            >
               <i className="fa-solid fa-play"></i>
               Play now
             </Link>
-            <Link className={movie.btn__more} to={"/"}>
+            <Link
+              className={movie.btn__more}
+              to={"https://en.wikipedia.org/wiki/Wednesday_(TV_series)"}
+            >
               <i className="fa-solid fa-play"></i>
               More information
             </Link>

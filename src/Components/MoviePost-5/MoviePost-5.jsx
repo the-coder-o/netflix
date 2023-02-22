@@ -9,13 +9,13 @@ import netflix from "../../Assets/logo/pngwing.com.png";
 import post1 from "../../Styles/MoviePost-2/moviePost-2.module.css";
 import Loader from "../Loader/Loader";
 
-const MoviePostOne = () => {
+const MoviePostFive = () => {
   const [loader, setLoader] = useState(false);
   const [data, setData] = useState([]);
   useEffect(() => {
     setLoader(true);
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=11&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=202&with_watch_monetization_types=flatrate`
     )
       .then((res) => res.json())
       .then((elem) => {
@@ -36,7 +36,7 @@ const MoviePostOne = () => {
   return (
     <div className="container">
       <>
-        <h3>Top-1 films</h3>
+        <h3>Top-5 films</h3>
         <Swiper
           slidesPerView={5}
           spaceBetween={10}
@@ -67,4 +67,4 @@ const MoviePostOne = () => {
   );
 };
 
-export default MoviePostOne;
+export default MoviePostFive;
