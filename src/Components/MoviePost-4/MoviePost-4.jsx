@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Loader from "../Loader/Loader";
 import netflix from "../../Assets/logo/pngwing.com.png";
-import post1 from "../../Styles/MoviePost-4/moviePost-4.module.css";
+import post1 from "../../Styles/MoviePost-4/MoviePost-4.module.css";
 
 const MoviePostOne = () => {
   const [loader, setLoader] = useState(false);
