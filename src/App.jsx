@@ -11,6 +11,7 @@ import MoviesAction from "./Components/Categorys/Movies/Movies";
 import Footer from "./Components/Footer/Footer";
 import MoviePopular from "./Components/Categorys/PopularMovies/PopularMovies";
 import SearchMovies from "./Components/SearchMovies/SearchMovies";
+import Page18 from "./Components/18-page/Page18";
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
         <Route path="/popular-movies-categories" element={<MoviePopular />} />
         <Route path="/sign-in-email-password-user" element={<SignInEmail />} />
         <Route path="/search-movies-category-all" element={<SearchMovies />} />
+        <Route
+          path="/You-are-looking-for-banned-movies-and-you-must-be-18+🔞"
+          element={<Page18 />}
+        />
       </Routes>
       <Footer />
     </div>

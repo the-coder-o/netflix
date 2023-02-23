@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./jenres.css";
 
-const Jenres = () => {
+const Genres = () => {
   const [data, setData] = useState([]);
-  const [genre, setGenre] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -14,7 +13,6 @@ const Jenres = () => {
       .then((elem) => elem.json())
       .then((item) => {
         setData(item.genres);
-        console.log(item);
       })
       .catch((error) => {
         console.log(error);
@@ -34,4 +32,4 @@ const Jenres = () => {
   );
 };
 
-export default Jenres;
+export default Genres;

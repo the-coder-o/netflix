@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+
+import Header from "../Header/Header";
+import Genres from "../Categorys/Jenres/Jenres";
 import netflix from "../../Assets/logo/pngwing.com.png";
 import search from "../../Styles/SearchMovies/searchMovies.module.css";
-import Jenres from "../Categorys/Jenres/Jenres";
-import Header from "../Header/Header";
 
 const SearchMovies = () => {
   const [data, setData] = useState([]);
@@ -25,6 +26,11 @@ const SearchMovies = () => {
   const imageUrlTwo = (posterpath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
+  const prohibited = () => {
+    prompt("You are looking for banned movies and you must be 18+");
+    window.location.href =
+      "/You-are-looking-for-banned-movies-and-you-must-be-18+🔞";
+  };
 
   function submitSearch(e) {
     e.preventDefault();
@@ -39,6 +45,9 @@ const SearchMovies = () => {
       .catch((error) => {
         console.log(error);
       });
+    if (searchMovies === "sex" || searchMovies === "porno") {
+      prohibited();
+    }
   }
 
   const imageUrl = (posterpath) => {
@@ -52,7 +61,7 @@ const SearchMovies = () => {
   return (
     <div>
       <Header />
-      <Jenres />
+      <Genres />
       <div className="container">
         <form onSubmit={submitSearch} className={search.form__search}>
           <input

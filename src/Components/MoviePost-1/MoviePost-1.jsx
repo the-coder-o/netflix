@@ -50,6 +50,9 @@ const MoviePostOne = () => {
               <>
                 <div className={post1.slider}>
                   <SwiperSlide className={post1.swiper__slide}>
+                    <div className={post1.favorite}>
+                      <a class="fa-regular fa-heart"></a>
+                    </div>
                     <img src={netflix} className={post1.img__netflix} alt="" />
                     <Link to={`/movie-product/${elem.id}`}>
                       <img src={imageUrl(elem?.poster_path)} />

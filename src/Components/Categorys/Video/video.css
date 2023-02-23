@@ -1,0 +1,9 @@
+.video1 {
+  width: 100%;
+}
+
+.logo__wednesday {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}

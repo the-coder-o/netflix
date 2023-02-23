@@ -6,6 +6,7 @@ import MoviePost3 from "../MoviePost-3/MoviePost-3";
 import MoviePost4 from "../MoviePost-4/MoviePost-4";
 import LogoSlider from "../Categorys/LogoSlider/LogoSlider";
 import MoviePostFive from "../MoviePost-5/MoviePost-5";
+import VideoSlider from "../Categorys/Video/Video";
 
 const Main = () => {
   return (
@@ -30,6 +31,9 @@ const Main = () => {
       </div>
       <div>
         <MoviePostFive />
+      </div>
+      <div>
+        <VideoSlider />
       </div>
     </>
   );

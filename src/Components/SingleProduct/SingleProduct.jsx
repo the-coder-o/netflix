@@ -5,11 +5,14 @@ import Header from "../Header/Header";
 import SimilarMovies from "../SimilarMovies/SimilarMovies";
 import single from "../../Styles/SingleProduct/singleProduct.module.css";
 import SingleProductDescription from "./Description";
+import Loader from "../Loader/Loader";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
+  const [loader, setLoader] = useState(false);
   useEffect(() => {
+    setLoader(true);
     fetch(
       `
       https://api.themoviedb.org/3/movie/${id}?api_key=2576e26d3fabae45b3ca2a56844da15a&language=en-US`
@@ -17,7 +20,7 @@ const SingleProduct = () => {
       .then((res) => res.json())
       .then((elem) => {
         setData(elem);
-        console.log(elem);
+        setLoader(false);
       })
       .catch((error) => {
         console.log(error);
@@ -26,6 +29,10 @@ const SingleProduct = () => {
   const imageUrl = (posterPath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterPath}`;
   };
+
+  if (loader) {
+    return <Loader />;
+  }
 
   return (
     <>
@@ -71,7 +78,7 @@ const SingleProduct = () => {
                 {data?.production_countries?.[0].iso_3166_1}
               </p>
               <div className={single.genres}>
-                {/* <span>{data?.genres?.[0].name}</span> */}
+                <span>{data?.genres?.[0].name}</span>
                 {/* <span>{data?.genres?.[1].name}</span> */}
                 {/* <span>{data?.genres?.[2].name}</span> */}
                 {/* <span>{data?.genres?.[3].name}</span> */}

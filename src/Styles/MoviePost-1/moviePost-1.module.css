@@ -48,3 +48,15 @@
   text-align: center;
   color: #fff !important;
 }
+
+.favorite {
+  top: 0px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+}
+
+.favorite a {
+  color: red !important;
+}
