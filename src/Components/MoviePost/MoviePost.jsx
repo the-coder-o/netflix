@@ -12,7 +12,7 @@ const MoviePost = () => {
       <div className={movie.father}>
         <div className={movie.movie__post}>
           <h1 className={movie.text}>
-            <img src={logoWednesday} width={300} alt="" />
+            <img src={logoWednesday} width={300} alt="" />2
           </h1>
           <div className={movie.img__logo}>
             <img src={logo} alt="" />
