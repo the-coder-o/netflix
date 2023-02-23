@@ -1,4 +1,4 @@
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +18,6 @@ const SimilarMovies = ({ id }) => {
       .then((res) => res.json())
       .then((elem) => {
         setData(elem.results);
-        console.log(elem);
       })
       .catch((error) => {
         console.log(error);
@@ -29,7 +28,7 @@ const SimilarMovies = ({ id }) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
 
-  const windowReload = (e) => {
+  const windowReload = () => {
     window.reload();
   };
 
@@ -38,10 +37,15 @@ const SimilarMovies = ({ id }) => {
       <Swiper
         slidesPerView={5}
         spaceBetween={10}
+        loop={true}
         navigation={{
           clickable: true,
         }}
-        modules={[Navigation]}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Autoplay]}
         className={similar.swipe}
       >
         {data.map((elem) => {

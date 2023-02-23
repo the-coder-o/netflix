@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import Header from "../Header/Header";
 import SimilarMovies from "../SimilarMovies/SimilarMovies";
@@ -35,7 +35,7 @@ const SingleProduct = () => {
   }
 
   return (
-    <>
+    <Fragment>
       <Header />
       <div className="container">
         <div className={single.single__product}>
@@ -102,7 +102,7 @@ const SingleProduct = () => {
         <h2>We recommend you 😍</h2>
         <SimilarMovies id={id} />
       </div>
-    </>
+    </Fragment>
   );
 };
 

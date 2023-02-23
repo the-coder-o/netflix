@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "autoplay": "^0.0.4",
     "firebase": "^9.17.1",
     "moment": "^2.29.4",
     "react": "^18.2.0",
