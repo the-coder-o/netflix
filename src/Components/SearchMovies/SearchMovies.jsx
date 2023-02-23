@@ -45,7 +45,13 @@ const SearchMovies = () => {
       .catch((error) => {
         console.log(error);
       });
-    if (searchMovies === "sex" || searchMovies === "porno") {
+    if (
+      searchMovies === "sex" ||
+      searchMovies === "porno" ||
+      searchMovies === "seks" ||
+      searchMovies === "18+" ||
+      searchMovies === "18"
+    ) {
       prohibited();
     }
   }
