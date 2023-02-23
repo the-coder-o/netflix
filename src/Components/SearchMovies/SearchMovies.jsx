@@ -27,7 +27,7 @@ const SearchMovies = () => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
   const prohibited = () => {
-    prompt("You are looking for banned movies and you must be 18+");
+    alert("You are looking for banned movies and you must be 18+");
     window.location.href =
       "/You-are-looking-for-banned-movies-and-you-must-be-18+🔞";
   };
